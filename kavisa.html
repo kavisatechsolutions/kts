@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Wishes</title>
+    <style>
+        body {
+            background-color: #000; /* Set background color to black */
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        #celestialContainer {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #sun {
+            font-size: 38px;
+            white-space: nowrap; /* Prevent text from wrapping */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: orange; /* Set the color to orange */
+            font-weight: bold; /* Make the text bold */
+        }
+
+        #earthOrbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            border: 2px dashed orange; /* Set the color to orange */
+            border-radius: 50%;
+            animation: rotateEarth 10s linear infinite;
+            font-weight: bold; /* Make the orbit line bold */
+        }
+
+        #earth {
+            position: absolute;
+            font-size: 36px; /* Increased font size */
+            white-space: nowrap; /* Prevent text from wrapping */
+            transform-origin: 0 50%;
+            animation: rotateText 10s linear infinite;
+        }
+
+        .cracker {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0; /* Initially invisible */
+            animation: explode 5s linear infinite;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0; /* Initially invisible */
+            animation: sparkle 2s linear infinite;
+        }
+
+        /* Additional text elements with different orbits */
+        #wishesOrbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            border: 2px dashed #fff; /* Set the color to white */
+            border-radius: 60%;
+            animation: rotateWishes 5s linear infinite;
+        }
+
+        #wishes {
+            position: absolute;
+            font-size: 24px;
+            white-space: nowrap; /* Prevent text from wrapping */
+            transform-origin: 0 50%;
+            animation: rotateWishesText 30s linear infinite;
+        }
+
+        #peaceOrbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 650px;
+            height: 650px;
+            border: 2px dashed #fff; /* Set the color to white */
+            border-radius: 50%;
+            animation: rotatePeace 10s linear infinite;
+        }
+
+        #peace {
+            position: absolute;
+            font-size: 24px;
+            white-space: nowrap; /* Prevent text from wrapping */
+            transform-origin: 0 50%;
+            animation: rotatePeaceText 12s linear infinite;
+        }
+
+        #prosperityOrbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 380px;
+            height: 380px;
+            border: 2px dashed #fff; /* Set the color to white */
+            border-radius: 50%;
+            animation: rotateProsperity 15s linear infinite;
+        }
+
+        #prosperity {
+            position: absolute;
+            font-size: 24px;
+            white-space: nowrap; /* Prevent text from wrapping */
+            transform-origin: 0 50%;
+            animation: rotateProsperityText 18s linear infinite;
+        }
+
+        @keyframes rotateWishes {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes rotateWishesText {
+            0% {
+                transform: rotate(0deg) translate(300px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translate(300px) rotate(-360deg);
+            }
+        }
+
+        @keyframes rotatePeace {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes rotatePeaceText {
+            0% {
+                transform: rotate(0deg) translate(250px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translate(250px) rotate(-360deg);
+            }
+        }
+
+        @keyframes rotateProsperity {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes rotateProsperityText {
+            0% {
+                transform: rotate(0deg) translate(180px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translate(180px) rotate(-360deg);
+            }
+        }
+
+        @keyframes rotateText {
+            0% {
+                transform: rotate(90deg) translate(200px) rotate(-90deg);
+            }
+            100% {
+                transform: rotate(450deg) translate(200px) rotate(-450deg);
+            }
+        }
+
+        @keyframes rotateEarth {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes explode {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(2);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(2);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="celestialContainer">
+        <div id="sun">Kavisa Tech Solutions</div>
+        <div id="earthOrbit">
+            <div id="earth">Happy New Year 2024 ! 🎉🥳</div>
+            <!-- Adding cracker works -->
+            <div class="cracker" style="top: -10px; left: -10px;"></div>
+            <div class="cracker" style="top: -10px; right: -10px;"></div>
+            <div class="cracker" style="bottom: -10px; left: -10px;"></div>
+            <div class="cracker" style="bottom: -10px; right: -10px;"></div>
+            <!-- Adding sparkles -->
+            <div class="sparkle" style="top: -20px; left: -20px;"></div>
+            <div class="sparkle" style="top: -20px; right: -20px;"></div>
+            <div class="sparkle" style="bottom: -20px; left: -20px;"></div>
+            <div class="sparkle" style="bottom: -20px; right: -20px;"></div>
+        </div>
+
+        <!-- Wishes -->
+        <div id="wishesOrbit">
+            <div id="wishes">Wishes! 🌟</div>
+            <div class="sparkle" style="top: -20px; left: -20px;"></div>
+            <div class="sparkle" style="top: -20px; right: -20px;"></div>
+            <div class="sparkle" style="bottom: -20px; left: -20px;"></div>
+            <div class="sparkle" style="bottom: -20px; right: -20px;"></div>
+        </div>
+
+        <!-- Peace -->
+        <div id="peaceOrbit">
+            <div id="peace">Peace! ✌️</div>
+            <div class="sparkle" style="top: -20px; left: -20px;"></div>
+            <div class="sparkle" style="top: -20px; right: -20px;"></div>
+            <div class="sparkle" style="bottom: -20px; left: -20px;"></div>
+            <div class="sparkle" style="bottom: -20px; right: -20px;"></div>
+        </div></div>
+
+        <!-- Prosperity -->
+        <div id="prosperityOrbit">
+            <div id="prosperity">Prosperity! 💰</div>
+            <div class="cracker" style="top: -10px; left: -10px;"></div>
+            <div class="cracker" style="top: -10px; right: -10px;"></div>
+            <div class="cracker" style="bottom: -10px; left: -10px;"></div>
+            <div class="cracker" style="bottom: -10px; right: -10px;"></div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
